@@ -1,0 +1,6 @@
+greenlet==0.4.0
+gevent==0.13.7
+
+git+ssh://dev.techresidents.com/tr/repos/techresidents/lib/python/trhttp_gevent.git@integration#egg=trhttp_gevent
+git+ssh://dev.techresidents.com/tr/repos/techresidents/lib/python/tres.git@integration#egg=tres
+
