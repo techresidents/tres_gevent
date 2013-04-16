@@ -1,0 +1,8 @@
+Tech Residents Python Elastic Search Library (Gevent)
+
+INSTALL:
+pip install git+ssh://dev.techresidents.com/tr/repos/techresidents/lib/python/tres_gevent#egg=tres_gevent
+
+DEVELOPMENT
+mkvirtualenv tres_gevent
+python setup.py develop
