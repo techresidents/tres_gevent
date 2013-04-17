@@ -7,7 +7,9 @@ class GESClient(ESClient):
             endpoint,
             timeout=10,
             keepalive=True,
-            rest_client_class=GRestClient):
+            rest_client_class=None):
+
+        rest_client_class = rest_client_class or GRestClient
 
         super(GESClient, self).__init__(
                 endpoint=endpoint,
