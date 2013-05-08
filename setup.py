@@ -35,7 +35,7 @@ setup(
         'greenlet>=0.4.0',
         'gevent>=0.13.7',
         'trpycore>=0.8.0',
-        'trhttp_gevent>=0.1',
-        'tres>=0.1'
+        'trhttp_gevent>=0.1.0',
+        'tres>=0.1.0'
     ]
 )
