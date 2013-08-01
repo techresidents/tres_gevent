@@ -14,7 +14,7 @@ def find_packages():
 
 setup(
     name='tres_gevent',
-    version = '0.2.0',
+    version = '0.3.0',
     author = 'Tech Residents, Inc.',
     packages = find_packages(),
     license = open('LICENSE').read(),
@@ -36,6 +36,6 @@ setup(
         'gevent>=0.13.7',
         'trpycore>=0.8.0',
         'trhttp_gevent>=0.1.0',
-        'tres>=0.1.0'
+        'tres>=0.2.0'
     ]
 )
