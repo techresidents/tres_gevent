@@ -1,16 +1,8 @@
 import os
-import setuptools
-from distutils.core import setup
+from setuptools import setup, find_packages, Extension
 
-def find_packages():
-    packages = []
-    for dir,subdirs,files in os.walk('tres_gevent'):
-        package = dir.replace(os.path.sep, '.')
-        if '__init__.py' not in files:
-            # not a package
-            continue
-        packages.append(package)
-    return packages
+import ez_setup
+ez_setup.use_setuptools()
 
 setup(
     name='tres_gevent',
@@ -34,9 +26,13 @@ setup(
     install_requires=[
         'greenlet>=0.4.0',
         'gevent>=0.13.7',
-        'trpycore>=0.11.0',
-        'trhttp>=0.5.0',
-        'trhttp_gevent>=0.5.0',
-        'tres>=0.5.0'
-    ]
+        'trpycore>=0.12.0',
+        'trhttp_gevent>=0.6.0',
+        'tres>=0.6.0'
+    ],
+    dependency_links=[
+        'git+ssh://dev.techresidents.com/tr/repos/techresidents/lib/python/trpycore.git@0.12.0#egg=trpycore-0.12.0',
+        'git+ssh://dev.techresidents.com/tr/repos/techresidents/lib/python/trhttp_gevent.git@0.6.0#egg=trhttp_gevent-0.6.0',
+        'git+ssh://dev.techresidents.com/tr/repos/techresidents/lib/python/tres.git@0.6.0#egg=tres-0.6.0'
+    ],
 )
